@@ -15,7 +15,7 @@ func LoadModule(module string) []models.Command {
 	}
 }
 
-func LoadModules(modules []string) *[]models.Command {
+func LoadModules(modules []string) []models.Command {
 	var list []models.Command
 	if modules != nil {
 		for _, module := range modules {
@@ -27,5 +27,5 @@ func LoadModules(modules []string) *[]models.Command {
 			list = append(list, LoadModule(module)...)
 		}
 	}
-	return &list
+	return list
 }

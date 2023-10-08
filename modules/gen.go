@@ -14,7 +14,7 @@ func NewGen() []models.Command {
 var Gen = []models.Command{
 	{
 		InternalName: "ping",
-		ApplicationCommand: discordgo.ApplicationCommand{
+		ApplicationCommand: &discordgo.ApplicationCommand{
 			Name:        "ping",
 			Description: "Check latency",
 		},
